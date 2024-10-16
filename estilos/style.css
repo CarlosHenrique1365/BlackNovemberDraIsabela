@@ -194,8 +194,8 @@ p i{
 
 .home{
     background-image: var(--gradiente-01);
-    height: 530px;
     display: grid;
+    height: 550px;
     grid-template-columns:minmax(270px, 1fr) 1fr;
     justify-content: center;
     text-align: center;
