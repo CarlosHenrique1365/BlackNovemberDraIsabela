@@ -405,3 +405,25 @@ i{
     font-size: .9rem;
     padding: 10px;
 }
+
+/* Estilo institucional*/
+.institucional{
+    height: 50vh;
+    padding: 80px 0px;
+    background-color:black;
+    border: 1px solid var(--cor03);
+}
+
+#selo{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.institucional p{
+    color: var(--cor-paragrafos);
+    font-family: var(--font-text);
+    color: var(--cor03);
+    font-size: .8rem;
+    margin: 0px 50px;
+}
