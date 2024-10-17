@@ -85,6 +85,7 @@ article{
 p{
     font-size: 1.1rem;
     color: var(--cor-paragrafos);
+    font-family: var(--font-text);
 }
 
 span{
@@ -295,7 +296,8 @@ p i{
 
 .info-details dd{
     color: var(--cor-paragrafos);
-    font-size: 1.2rem;
+    font-family: var(--font-text);
+    font-size: .8rem;
     margin: 5px;
     padding: 5px;
 }
@@ -307,6 +309,17 @@ p i{
 i{
     color: var(--cor05);
     font-size: .7rem;
+}
+
+.preco-post{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px solid var(--cor03);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 /* Estilos Info-benefícios */
@@ -408,22 +421,34 @@ i{
 
 /* Estilo institucional*/
 .institucional{
-    height: 50vh;
-    padding: 80px 0px;
+    height: 60vh;
+    padding: 20px 0px 40px 0px;
     background-color:black;
-    border: 1px solid var(--cor03);
 }
 
 #selo{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 30px;
 }
 
 .institucional p{
     color: var(--cor-paragrafos);
     font-family: var(--font-text);
-    color: var(--cor03);
+    color: var(--cor-paragrafos);
     font-size: .8rem;
-    margin: 0px 50px;
+    margin: 15px 50px;
+}
+
+/* Estilo footer */
+footer{
+    background-color: #000000;
+}
+
+footer p{
+    padding: 10px;
+    color: #fff;
+    font-family: var(--font-text);
+    font-size: .5rem;
 }
