@@ -187,7 +187,7 @@ p i{
 .button, .list-product li{
     background: var(--gradienet-animacao);
     background-size: 200% 200%;
-    animation: gradientAnimation 5s ease infinite;
+    animation: gradientAnimation 2s ease infinite;
   }
 
 @keyframes gradientAnimation {
