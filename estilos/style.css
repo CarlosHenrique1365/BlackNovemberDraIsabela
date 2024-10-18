@@ -30,6 +30,7 @@
     --gradienet-animacao:linear-gradient(45deg, #eabd9b, #f3cbb2, #e0a887, #d7986e);
 }
 
+
 hr{
     width: 80%;
     margin: 0 auto;
@@ -107,6 +108,20 @@ p i{
 #obsr i{
     color: var(--cor05);
 }
+
+/* Estilo scroll */
+.js-scroll{
+    opacity: 0;
+    transform: translate3d(-20px, 0, 0);
+    transition: .8s;
+    transition-timing-function: ease-in;
+}
+
+.js-scroll.ativar-scroll{
+    opacity: 1;
+    transform: translate3d( 0, 0, 0);
+}
+
 /* Estilo icones */
 
 .material-symbols-outlined {
@@ -191,12 +206,13 @@ p i{
 .container-home{
     background: url('../midias/img-background-home.png') no-repeat  60% 20%;
     background-size: cover;
+    height: 90vh;
 }
 
 .home{
     background-image: var(--gradiente-01);
     display: grid;
-    height: 550px;
+    height: 90vh;
     grid-template-columns:minmax(270px, 1fr) 1fr;
     justify-content: center;
     text-align: center;
@@ -215,6 +231,7 @@ p i{
     padding:0px 20px;
     color:var(--cor02);
     text-align: center;
+    font-size: 1.1rem;
 }
 
 .home p{
@@ -279,28 +296,52 @@ p i{
     margin-bottom: 30px;
 }
 
-.info-details dt{
+.accordion-list dt{
     font-family: var(--font-titulo);
     color: var(--cor05);
     font-size: 1.3rem;
     cursor: pointer;
 }
 
-.info-details dt::after{
+.accordion-list dt::after{
     content: "  ↴";
 }
 
-.info-details .ativo dt::after{
+.accordion-list dt.ativo::after{
     content: "  ⬏";
 }
 
-.info-details dd{
+.accordion-list dd{
     color: var(--cor-paragrafos);
     font-family: var(--font-text);
     font-size: .8rem;
     margin: 5px;
     padding: 5px;
+    display: none;
 }
+
+.accordion-list dd.ativo{
+    display: block;
+    animation:arrowDown .8s ease-in;
+}
+
+@keyframes arrowDown {
+    from{
+        opacity: 0;
+        max-height: 0px;
+    }
+    to{
+        opacity: 1;
+        max-height: 200px;    
+    }
+    
+}
+
+.skills ul{
+    list-style: none;
+    grid-column: 2;
+}
+
 
 #btn-details{
     margin-top: 50px;
@@ -422,7 +463,7 @@ i{
 /* Estilo institucional*/
 .institucional{
     height: 60vh;
-    padding: 20px 0px 40px 0px;
+    padding: 20px 0px;
     background-color:black;
 }
 
@@ -438,7 +479,7 @@ i{
     font-family: var(--font-text);
     color: var(--cor-paragrafos);
     font-size: .8rem;
-    margin: 15px 50px;
+    margin: 15px 0px;
 }
 
 /* Estilo footer */
